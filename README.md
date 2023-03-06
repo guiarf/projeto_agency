@@ -1,2 +1,3 @@
-# projeto_agency
-Projeto interface de uma agência digital utilizando SASS.
+# Projeto Agency
+
+Projeto de estudo, desenvolvimento de interface para uma agência digital utilizando SASS.
