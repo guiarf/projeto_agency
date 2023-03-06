@@ -60,3 +60,43 @@
             span
                 font-size: 4rem
                 margin-top: 1rem
+
+// MAIN SECTION - SERVICES
+.services
+    margin: 2rem
+    padding: 2rem
+    text-align: center
+
+    h2
+        @extend %section-title
+
+    &-card
+        display: flex
+        padding: 2rem
+        flex-wrap: wrap
+        justify-content: space-around
+
+        &_single
+            width: 30%
+            margin: 1%
+            padding: 2rem
+            border: 1px solid #CCC
+            transition: .3s
+
+            i
+                display: block
+                font-size: 4rem
+                margin-top: 1rem
+                margin-bottom: 1.5rem
+                color: $primary-color
+            
+            h3
+                font-size: 1.5rem
+                margin-bottom: 1rem
+
+            p
+                color: $text-color
+            
+            &:hover
+                border: transparent
+                box-shadow: 0 1px 10px #CCC
