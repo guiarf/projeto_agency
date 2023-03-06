@@ -12,6 +12,13 @@
     background-size: cover
     background-position: center
 
+    @include mobile
+        height: 100vh
+
+    nav
+        @include mobile
+        display: none
+
     .nav-container
         z-index: 999
         display: flex
@@ -22,6 +29,9 @@
         top: 0
         left: 0
         right: 0
+
+        @include mobile
+            padding: 1rem
 
         .nav-container_brand
             color: $white
@@ -45,6 +55,9 @@
             color: $white
             font-size: 2rem
 
+            @include mobile
+                display: block
+
     .hero-container
         height: 100%
         color: $white
@@ -54,12 +67,16 @@
         flex-direction: column
         justify-content: center
 
+        @include mobile
+            padding: 2rem
+            text-align: center
+
         h1
-            font-size: 3rem
+            font-size: 1rem
             @extend %hero-text-shadow
 
             span
-                font-size: 4rem
+                font-size: 3rem
                 margin-top: 1rem
 
 // SECTION - SERVICES
@@ -67,6 +84,9 @@
     margin: 2rem
     padding: 2rem
     text-align: center
+
+    @include mobile
+        margin: 2rem 0
 
     h2
         @extend %section-title
@@ -77,12 +97,19 @@
         flex-wrap: wrap
         justify-content: space-around
 
+        @include mobile
+            padding: 2rem 0
+
         &_single
             width: 30%
             margin: 1%
             padding: 2rem
             border: 1px solid #CCC
             transition: .3s
+
+            @include mobile
+                width: 100%
+                margin-bottom: 2rem
 
             i
                 display: block
@@ -107,12 +134,18 @@
     padding: 3rem
     background-color: $secondary-bg
 
+    @include mobile
+        padding: 2rem
+
     h2
         @extend %section-title
     
     &_list
         display: flex
         padding: 2rem 0
+
+        @include mobile
+            flex-direction: column
 
         .first-project
             width: 30%
@@ -125,10 +158,17 @@
             @extend %center-bg
             @extend %card-hover
 
+            @include mobile
+                @include card-mobile
+
         .other-projects
             width: 68%
             display: flex
             flex-wrap: wrap
+
+            @include mobile
+                width: 100%
+                flex-direction: column
             
             &_card
                 width: 46%
@@ -139,6 +179,9 @@
                 margin-bottom: 15px
                 @extend %center-bg
                 @extend %card-hover
+
+                @include mobile
+                    @include card-mobile
             
             #project2
                 background-image: url('../img/project2.jpg')
@@ -173,38 +216,52 @@
             
 // FOOTER
 footer
-    color: $white
+    color: $text-color
     padding: 5rem 2rem
     background-color: $footer-bg
 
-    .primary-footer
+    .footer-container
         margin: 0 auto
         display: flex
         flex-wrap: wrap
         max-width: 1200px
 
-        &_about
+        @include mobile
+            max-width: 100%
+            flex-direction: column
+
+        .footer_title
+            color: $white
+            font-weight: bold
+            margin-bottom: 1rem
+
+        .footer_about, .footer_links
+            width: 50%
+
+            @include mobile
+                width: 100%
+                text-align: center
+                margin-bottom: 2rem
+        .footer_about
             p
                 width: 80%
                 line-height: 1.3
-                color: $text-color
 
-        &_about, &_links-list
-            width: 50%
+                @include mobile
+                    width: 100%
 
-        &_title
-            font-weight: bold
-            margin-bottom: 1rem
-        
-        &_links
+        .footer_links
             display: flex
 
-            &-title
-                margin-bottom: 1rem
+            @include mobile
+                flex-direction: column
 
             &-list
                 padding: 0 1rem
 
+                @include mobile
+                    margin-bottom: 2rem
+                
                 li
                     margin-bottom: .5rem
 
@@ -214,11 +271,13 @@ footer
 
                         &:hover
                             color: $white
+        
+        .footer_rights
+            width: 100%
+            margin-top: 3rem
 
-    .secondary-footer
-        width: 100%
-        margin-top: 3rem
+            @include mobile
+                text-align: center
 
-        p
-            color: $text-color
-            text-align: center
+            p
+                margin-bottom: 1rem
