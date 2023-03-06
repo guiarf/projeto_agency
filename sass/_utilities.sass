@@ -26,6 +26,18 @@
     font-size: 3rem
     text-align: center
 
+%center-bg
+    background-size: cover
+    background-position: center
+
+%card-hover
+    .projects_list_card-cover, .projects_list_card-title
+        opacity: 0
+
+    &:hover
+        .projects_list_card-cover, .projects_list_card-title, .projects_list_card-description
+            opacity: 1
+
 // BUTTONS
 .btn
     color: $white
