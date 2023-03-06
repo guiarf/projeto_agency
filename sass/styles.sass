@@ -72,12 +72,18 @@
             text-align: center
 
         h1
-            font-size: 1rem
+            font-size: 3rem
             @extend %hero-text-shadow
 
+            @include mobile
+                font-size: 2rem
+
             span
-                font-size: 3rem
+                font-size: 4rem
                 margin-top: 1rem
+
+                @include mobile
+                    font-size: 3rem
 
 // SECTION - SERVICES
 .services
