@@ -171,3 +171,54 @@
             padding: 1rem
             font-size: .9rem
             
+// FOOTER
+footer
+    color: $white
+    padding: 5rem 2rem
+    background-color: $footer-bg
+
+    .primary-footer
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        max-width: 1200px
+
+        &_about
+            p
+                width: 80%
+                line-height: 1.3
+                color: $text-color
+
+        &_about, &_links-list
+            width: 50%
+
+        &_title
+            font-weight: bold
+            margin-bottom: 1rem
+        
+        &_links
+            display: flex
+
+            &-title
+                margin-bottom: 1rem
+
+            &-list
+                padding: 0 1rem
+
+                li
+                    margin-bottom: .5rem
+
+                    a
+                        color: $text-color
+                        transition: .5s
+
+                        &:hover
+                            color: $white
+
+    .secondary-footer
+        width: 100%
+        margin-top: 3rem
+
+        p
+            color: $text-color
+            text-align: center
