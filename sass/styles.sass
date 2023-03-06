@@ -4,3 +4,59 @@
     
 // Includes
 @include reset
+
+#main-banner
+    height: 85vh
+    background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6) ), url('../img/office.jpg')
+    background-size: cover
+    background-position: center
+
+    .nav-container
+        z-index: 999
+        display: flex
+        padding: 1.5rem 2rem
+        justify-content: space-between
+        background-color: $black
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+
+        .nav-container_brand
+            color: $white
+            font-size: 2rem
+            @include main-hover
+
+        &_navbar
+            height: 100%
+            display: flex
+            align-items: center
+
+            li
+                margin: 5px 10px
+
+                a
+                    color: $white
+                    @include main-hover
+
+        .fas.fa-bars
+            display: none
+            color: $white
+            font-size: 2rem
+
+    .hero-container
+        height: 100%
+        color: $white
+        display: flex
+        text-align: center
+        align-items: center
+        flex-direction: column
+        justify-content: center
+
+        h1
+            font-size: 3rem
+            @extend %hero-text-shadow
+
+            span
+                font-size: 4rem
+                margin-top: 1rem

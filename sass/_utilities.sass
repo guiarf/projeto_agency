@@ -1,4 +1,4 @@
-// Mixins
+// MIXINS
 @mixin reset
     *
         margin: 0
@@ -11,3 +11,38 @@
 
     li
         list-style: none
+
+@mixin main-hover
+    transition: .3s
+
+    &:hover
+        color: $primary-color
+
+// PLACEHOLDER SELECTORS
+%hero-text-shadow
+    text-shadow: 3px 2px $black
+
+// BUTTONS
+.btn
+    color: $white
+    padding: .6rem 1rem
+    border-radius: 5px
+    border: 1px solid $white
+    text-transform: uppercase
+    transition: .3s
+
+    &:hover
+        color: $primary-color
+        border-color: $primary-color
+    
+    &-primary
+        border-color: $primary-color
+        background-color: $primary-color
+
+        &:hover
+            background-color: transparent
+
+    &-rounded
+        margin-top: 1rem
+        border-radius: 2rem
+        padding: 1rem 1.5rem
